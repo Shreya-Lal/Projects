@@ -12,9 +12,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '5t6m9x5-_e=uol!u+eflqv=v8n%^f@rj$qwxb*nb5fixy2$d)-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get(‘DEBUG_VALUE’) #True
+DEBUG = True
 
-ALLOWED_HOSTS = ['buildpost.herokuapp.com’, ‘0.0.0.0’']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -110,16 +110,16 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') #this
+#STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') #this
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),  # this
 )
 
-#heroku settings
-if os.getcwd() == '/app':
-    import dj_database_url
-    db_from_env = dj_database_url.config(conn_max_age=500)
-    DATABASES['default'].update(db_from_env)
+ #heroku settings
+#if os.getcwd() == '/app':
+ #   import dj_database_url
+  #  db_from_env = dj_database_url.config(conn_max_age=500)
+   # DATABASES['default'].update(db_from_env)
 
-    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+    #SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
