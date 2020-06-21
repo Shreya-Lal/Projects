@@ -1,9 +1,18 @@
 {% extends 'base.html' %}
-{% block content %}
-    {% for post in object_list %}
-        <div class="post-entry">
-            <h2><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h2>
-            <p>{{ post.body }}</p>
+<div class="content container">
+    <div class="row">
+        <div class="col-md-8">
+            {% block content %}
+                {% for post in object_list %}
+                    <div class="post-entry">
+                        <div class="date">
+                            <p><strong>Published: {{ post.published_date }} </strong></p>
+                        </div>
+                        <h2><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h2>
+                        <!--<p>{{ post.body|linebreaksbr }} </p>-->
+                    </div>
+                {% endfor %}
+            {% endblock content %}
         </div>
-    {% endfor %}
-{% endblock content %}
+    </div>
+</div>

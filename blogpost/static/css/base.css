@@ -1,45 +1,57 @@
-body {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 18px;
+.page-header {
+    text-align: center;
+    background-color: #C25100;
+    margin-top: 0;
+    padding: 20px 20px 20px 40px;
 }
-}
-header {
-    border-bottom: 1px solid #999;
-    margin-bottom: 2rem;
-    display: flex;
-}
-header h1 a {
-    color: red;
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    padding-right: 15px;
+    text-align: justify-all;
+    color: #ffffff;
+    font-size: 36pt;
     text-decoration: none;
 }
 
-.nav-left {
-    margin-right: auto;
+.content {
+    text-align: justify-all;
+    margin-left: 15px;
 }
 
-.nav-right {
-    display: flex;
-    padding-top: 2rem;
+h1, h2, h3, h4 {
+    padding-right: 15px;
+    text-align: justify-all;
+    font-family: 'Lobster', cursive;
+}
+
+.date {
+    padding-right: 15px;
+    text-align: right;
+    color: #67128b;
+}
+
+.save {
+    float: right;
+}
+
+.post-entry textarea, .post-entry input {
+    width: 100%;
+}
+
+.top-menu, .top-menu:hover, .top-menu:visited {
+    color: #ffffff;
+    float: right;
+    font-size: 26pt;
+    margin-right: 20px;
 }
 
 .post-entry {
-    margin-bottom: 2rem;
+    text-align: justify-all;
+    padding-left: 15px;
+    margin-bottom: 70px;
 }
 
-.post-entry h2 {
-    margin: 0.5rem 0;
-}
-
-.post-entry h2 a,
-.post-entry h2 a:visited {
-    color: blue;
-    text-decoration: none;
-}
-
-.post-entry p {
-    margin: 0;
-    font-weight: 400;
-}
-.post-entry h2 a:hover {
-    color: red;
+.post-entry h2 a, .post-entry h2 a:visited {
+    padding-right: 15px;
+    color: #000000;
 }
